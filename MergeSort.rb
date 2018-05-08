@@ -28,7 +28,6 @@ class MergeSort
       sort(arr, lo, mid)        # 将左半部分排序
       sort(arr, mid+1, hi)      # 将右半部分排序
       _merge(arr, lo, mid, hi)  # 将两个半部分归并
-      p arr
       end
     end
 
