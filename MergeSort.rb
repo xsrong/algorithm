@@ -20,15 +20,15 @@ class MergeSort
   class << self
     def sort arr, lo, hi
       return if lo >= hi
-      if lo - hi == 1
-        arr[lo], arr[hi] = arr[hi], arr[lo] if arr[lo] > arr[hi]
-        return
-      else
+#       if lo - hi == 1
+#         arr[lo], arr[hi] = arr[hi], arr[lo] if arr[lo] > arr[hi]
+#         return
+#       else
       mid = lo + (hi - lo) / 2
       sort(arr, lo, mid)        # 将左半部分排序
       sort(arr, mid+1, hi)      # 将右半部分排序
       _merge(arr, lo, mid, hi)  # 将两个半部分归并
-      end
+#       end
     end
 
     def _merge arr, lo, mid, hi
