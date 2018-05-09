@@ -5,7 +5,7 @@
 
 class ShellSort
   class << self
-    def sort arr
+    def sort arr                                                
       h = 1
       h = h * 3 + 1 if h < arr.length / 3
       while h >= 1
@@ -14,6 +14,21 @@ class ShellSort
           while j < i
             arr[i], arr[j] = arr[j], arr[i] if arr[j] > arr[i]
             j += h
+          end
+        end
+        h /= 3
+      end
+    end
+
+    def sort2 arr
+      h = 1
+      h = h * 3 + 1 if h < arr.length / 3
+      while h >= 1
+        for i in h..arr.length - 1
+          j = i
+          while j >= h
+            arr[j], arr[j-h] = arr[j-h], arr[j] if arr[j-h] > arr[j]
+            j -= h
           end
         end
         h /= 3
