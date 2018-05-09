@@ -55,9 +55,7 @@ class MergeSort
           hi = lo + size * 2 - 1
           mid = lo + size - 1
           hi = [lo + size * 2 - 1, arr.length - 1].min
-          p arr[lo..mid], arr[mid+1..hi]
           _merge(arr, lo, mid, hi)
-          p arr
           lo = hi + 1
         end
         size *= 2            # 下一轮归并的长度翻倍
