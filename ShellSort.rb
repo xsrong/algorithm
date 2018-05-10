@@ -30,6 +30,12 @@ class ShellSort
           while j >= h
             arr[j], arr[j-h] = arr[j-h], arr[j] if arr[j-h] > arr[j]
             j -= h
+#             if arr[j-h] > arr[j]
+#               arr[j], arr[j-h] = arr[j-h], arr[j]
+#               j -= h
+#             else
+#               break
+#             end
           end
         end
         h /= 3
