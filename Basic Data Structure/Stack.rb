@@ -17,6 +17,7 @@ class Stack
   end
   
   def pop                   # 删除栈尾部的元素
+    return nil if @first == nil
     item = @first.item
     @first = @first.next
     @l -= 1
