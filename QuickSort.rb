@@ -95,8 +95,3 @@ class QuickSort
     end
   end
 end
-
-a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].shuffle
-p a
-QuickSort.sort a, 0, 9
-p a
