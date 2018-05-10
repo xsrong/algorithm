@@ -63,11 +63,11 @@ class InsertionSort
       end
     end
     
-    def sort2 arr                              # 另一个插入排序的实现
+    def sort2 arr                              # 另一个插入排序的实现。
       for i in 1..arr.length - 1
         j = i
         while j >= 1
-          arr[j], arr[j-1] = arr[j-1], arr[j] if arr[j-1] > arr[j]
+          arr[j], arr[j-1] = arr[j-1], arr[j] if arr[j-1] > arr[j]   # 这里应该还可以改进，以避免不必要的相邻元素大小的比较。
           j -= 1
         end
       end
