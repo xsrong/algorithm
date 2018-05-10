@@ -67,8 +67,14 @@ class InsertionSort
       for i in 1..arr.length - 1
         j = i
         while j >= 1
-          arr[j], arr[j-1] = arr[j-1], arr[j] if arr[j-1] > arr[j]   # 这里应该还可以改进，以避免不必要的相邻元素大小的比较。
+          arr[j], arr[j-1] = arr[j-1], arr[j] if arr[j-1] > arr[j]   # 这里应该还可以改进，减少比较的次数。
           j -= 1
+#           if arr[j-1] > arr[j]
+#             arr[j], arr[j-1] = arr[j-1], arr[j]
+#             j -= 1
+#           else
+#             break                                                  # 前面已经排序完成，无需再一一比较
+#           end
         end
       end
     end
