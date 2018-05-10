@@ -1,8 +1,12 @@
 # algorithm
 all algorithms are base on [Algorithms 4th Edition](https://algs4.cs.princeton.edu/home/).<br>
-Implement with Ruby.
- 
-## Sort 
+Implement with Ruby.<br>
+
+## Basic Data Structure<br>
+- Node <br>
+- Stack <br>
+
+## Sort<br>
 - Bubble Sort  <br>
 - Insertion Sort  <br>
 - Merge Sort  <br>
