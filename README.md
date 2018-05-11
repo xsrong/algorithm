@@ -5,6 +5,7 @@ Implement with Ruby.<br>
 ## Basic Data Structure<br>
 - Node <br>
 - Stack <br>
+- Queue <br>
 
 ## Sort<br>
 - Bubble Sort  <br>
