@@ -84,11 +84,9 @@ class QuickSort
         end
         if left_mark >= right_mark
           arr[povit], arr[left_mark] = arr[left_mark], arr[povit]
-          p arr
           break
         end
         arr[left_mark], arr[right_mark] = arr[right_mark], arr[left_mark]
-        p arr
       end
       sort arr, lo, left_mark - 1
       sort arr, left_mark + 1, hi
