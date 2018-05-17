@@ -86,14 +86,11 @@ class Quick3Way
           arr[mid_mark], arr[left_mark] = arr[left_mark], arr[mid_mark]
           mid_mark += 1
           left_mark += 1
-          p arr
         elsif arr[mid_mark] > pivot
           arr[mid_mark], arr[right_mark] = arr[right_mark], arr[mid_mark]
           right_mark -= 1
-          p arr
         else
           mid_mark += 1
-          p arr
         end
       end
       sort arr, lo, left_mark - 1
