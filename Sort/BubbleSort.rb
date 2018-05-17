@@ -53,7 +53,7 @@
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]  排序结果
 =end
 
-class BubbleSrot
+class BubbleSort
   class << self
     def sort arr
       j = arr.length - 1
