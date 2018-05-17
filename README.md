@@ -12,5 +12,6 @@ Implement with Ruby.<br>
 - Insertion Sort  <br>
 - Merge Sort  <br>
 - Quick Sort  <br>
+- Quick 3 Way  <br>
 - Selection Sort  <br>
 - Shell Sort  <br>
