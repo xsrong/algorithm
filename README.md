@@ -6,6 +6,7 @@ Implement with Ruby.<br>
 - Node <br>
 - Stack <br>
 - Queue <br>
+- BinarySearchST（Array）  <br>
 
 ## Sort<br>
 - Bubble Sort  <br>
