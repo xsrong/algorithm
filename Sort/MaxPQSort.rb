@@ -75,14 +75,14 @@ class MaxPQSort2
       # 首先将数组整理为堆。将数组每个元素依次“插入”堆中。
       for i in 1..arr.length - 1
         temp_i = i
-        swim arr, temp_i
+        swim arr, temp_i                                  # 将arr[i]上浮到堆中合适的位置
       end
       # 将堆的最大元素换到末尾，再将数组不包含最后一个元素的部分整理为堆。如此循环。
       n = arr.length - 1
       while n > 0
-        arr[0], arr[n] = arr[n], arr[0]
-        n -= 1
-        sink arr, n
+        arr[0], arr[n] = arr[n], arr[0]                   # 将首元素（值最大）与arr[n]进行交换
+        n -= 1                                            # 再次进行堆有序的整理时无需整理arr[n]
+        sink arr, n                                       # 将交换后的首元素下沉到合适的位置。
       end
     end
     
