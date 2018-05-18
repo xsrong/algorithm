@@ -66,3 +66,44 @@ class MaxPQ
     end
   end
 end
+
+# 无需实际另外创建一个堆，直接将原数组就地整理为堆的实现
+
+class MaxPQSort2
+  class << self
+    def sort arr
+      # 首先将数组整理为堆。将数组每个元素依次“插入”堆中。
+      for i in 1..arr.length - 1
+        temp_i = i
+        swim arr, temp_i
+      end
+      # 将堆的最大元素换到末尾，再将数组不包含最后一个元素的部分整理为堆。如此循环。
+      n = arr.length - 1
+      while n > 0
+        arr[0], arr[n] = arr[n], arr[0]
+        n -= 1
+        sink arr, n
+      end
+    end
+    
+    def swim arr, i
+      while i > 0 && arr[i] > arr[(i-1)/2]
+        arr[i], arr[(i-1)/2] = arr[(i-1)/2], arr[i]
+        i = (i - 1) / 2
+      end
+    end
+    
+    def sink arr, n
+      i = 0
+      while i * 2 + 1 <= n
+        j = i * 2 + 1
+        j += 1 if j < n && arr[j] < arr[j+1]
+        break if arr[i] >= arr[j]
+        arr[i], arr[j] = arr[j], arr[i]
+        i = j
+      end
+    end
+  end
+end
+
+
