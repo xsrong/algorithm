@@ -6,8 +6,8 @@ Implement with Ruby.<br>
 - Node <br>
 - Stack <br>
 - Queue <br>
-- BinarySearchST（array base）  <br>
-- BST  <br>
+- BinarySearchST (array base)  <br>
+- BST (tree)  <br>
 
 ## Sort<br>
 - Bubble Sort  <br>
