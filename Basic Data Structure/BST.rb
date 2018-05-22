@@ -18,6 +18,7 @@ class BST
     elsif key < node.key
       node.left = put(key, val, node.left)              # 插入的key值小于当前结点key值时，将新的键值对插入到当前结点的左子树中
     end
+    node.size = size(node.left) + 1 + size(node.right)
     @root = node
   end
 
@@ -40,6 +41,7 @@ class BST
   def delete_max node=@root                             # 删除树中key值最大的node
     return node.left if node.right == nil               # 当前node不存在右子树时，则返回其左子树（此时表明当前node已经是最大值）
     node.right = delete_max(node.right)                 # 当前node存在右子树时，则继续搜索其右子树
+    node.size = size(node.left) + 1 + size(node.right)
     return node
   end
 
@@ -52,6 +54,7 @@ class BST
   def delete_min node=@root                             # 同delete_max
     return node.right if node.left == nil
     node.left = delete_min node.left
+    node.size = size(node.left) + 1 + size(node.right)
     return node
   end
 
@@ -73,6 +76,7 @@ class BST
         node.left = temp_node.left                      # 将选择的右子树中的最小结点的左子树设置为原当前节点的左子树
       end
     end
+    node.size = size(node.left) + 1 + size(node.right)
     @root = node
   end
 
@@ -138,15 +142,16 @@ class BST
 
   def size node=@root
     return 0 if node == nil
-    return size(node.left) + 1 + size(node.right)
+    return node.size
   end
 end
 
 class Node
-  attr_accessor :key, :val, :right, :left
+  attr_accessor :key, :val, :right, :left, :size
   def initialize(key, val)
     @key = key
     @val = val
     @right = @left = nil
+    @size = 0
   end
 end
