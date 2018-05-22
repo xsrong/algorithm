@@ -17,4 +17,4 @@ Implement with Ruby.<br>
 - Quick 3 Way  <br>
 - Selection Sort  <br>
 - Shell Sort  <br>
-- MaxPQSort  <br>
+- MaxPQSort (Heap)  <br>
