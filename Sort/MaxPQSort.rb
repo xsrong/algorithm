@@ -105,5 +105,3 @@ class MaxPQSort2
     end
   end
 end
-
-

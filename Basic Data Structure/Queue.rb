@@ -26,6 +26,7 @@ class Queue
     item = @first.item
     @first = @first.next            # 队列不为空时将@first指向原队列第二个元素。此时原队列首个元素成为孤儿被回收。
     @l -= 1
+    @last = nil if is_empty?
     return item
   end
   

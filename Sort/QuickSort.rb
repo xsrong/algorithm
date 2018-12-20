@@ -91,5 +91,39 @@ class QuickSort
       sort arr, lo, left_mark - 1
       sort arr, left_mark + 1, hi
     end
+
+    def sort2(arr)                          # 不使用递归的快速排序
+      left_mark_temp = [1]
+      right_mark_temp = [arr.length - 1]
+      while right_mark_temp.length != 0
+        left = left_mark_temp.pop
+        right = right_mark_temp.pop
+        pivot = left - 1
+        last = right
+        while last > pivot
+          while right > pivot
+            break if arr[right] < arr[pivot]
+            right -= 1
+          end
+          while left < right
+            break if arr[left] > arr[pivot]
+            left += 1
+          end
+          if left >= right
+            arr[pivot], arr[right] = arr[right], arr[pivot]
+            left_mark_temp << pivot + 1
+            left_mark_temp << right + 2
+            right_mark_temp << right - 1
+            right_mark_temp << last
+            break
+          end
+          arr[left], arr[right] = arr[right], arr[left]
+        end
+      end
+    end
   end
 end
+
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+                      ↑           
+                     l r

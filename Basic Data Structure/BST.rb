@@ -144,7 +144,7 @@ class BST
     return 0 if node == nil
     return node.size
   end
-  
+
   def height node=@root
     return 0 if node == nil
     left_height = height(node.left)
@@ -163,6 +163,16 @@ class Node
     @key = key
     @val = val
     @right = @left = nil
-    @size = 0
+    @size = 1
   end
 end
+
+bst = BST.new
+bst.put(5, 5)
+bst.put(3, 3)
+bst.put(4, 4)
+bst.put(8, 8)
+bst.put(10, 10)
+bst.put(6, 6)
+bst.put(7, 7)
+p bst.size

@@ -8,7 +8,7 @@ class ShellSort
   class << self
     def sort arr                                                
       h = 1
-      h = h * 3 + 1 if h < arr.length / 3
+      h = h * 3 + 1 while h < arr.length / 3
       while h >= 1
         for i in h..arr.length - 1
           j = 0
@@ -19,11 +19,12 @@ class ShellSort
         end
         h /= 3
       end
+      return arr
     end
 
     def sort2 arr
       h = 1
-      h = h * 3 + 1 if h < arr.length / 3
+      h = h * 3 + 1 while h < arr.length / 3
       while h >= 1
         for i in h..arr.length - 1
           j = i
@@ -40,6 +41,10 @@ class ShellSort
         end
         h /= 3
       end
+      return arr
     end
   end
 end
+
+str = 'EASYSORT'
+p ShellSort.sort(str)
